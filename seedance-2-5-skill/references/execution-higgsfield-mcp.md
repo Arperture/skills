@@ -223,6 +223,26 @@ texture, body type and temperament. Write role, build, clothing, and action
 rather than an age. Skin texture (pores, translucency, flush) is the slot that
 most separates a photograph from a render. See [real person](real-person.md).
 
+### The guide's prompt library
+
+The guide ships ten tested prompt categories, each run across several
+generations to find the structure that held. The example prompts and their
+settings live on the page itself; this is the category list with the route
+each one takes through this skill.
+
+| Guide category | Skill route | Notes |
+|---|---|---|
+| Dramatic Exterior | T2V, or an I2V shot pair from a plate | Weather and time of day go in LOCATION; one camera move |
+| Action Sequence | T2V, staged | Labelled shots with hard cuts; the PHYSICS line carries weight and impact |
+| Commercial Product | R2V asset references | `@Image 1` is the product with a label exclusion; see the worked example below |
+| Epic Landscape | T2V | Wide and extreme-wide sizes; aerial or FPV as the single camera grammar |
+| Noir Scene | T2V | Lighting motivation and direction do most of the work; GLOBAL STYLE sets era and grade |
+| Multi-Character Scene | R2V asset references | One reference per character, a non-interchange lock, beats that name characters rather than handles; see [multi reference](multi-reference.md) |
+| Fantasy Action | T2V, or R2V with a style reference | PHYSICS for cloth, smoke, and liquid; one subject per camera move |
+| UGC-Style Ad | R2V asset references, `9:16` | Handheld, first-person; AUDIO carries diegetic dialogue in `{}`. Higgsfield's bundled UGC workflows (`get_workflow_instructions`) are the alternative for talking-head formats |
+| Horror Scene | T2V, staged | Vague transitions break tension fastest; an end state per shot; AUDIO names what must not be there |
+| Documentary Style | T2V | Handheld, natural light, `No music` in AUDIO; the [real person](real-person.md) formula for subjects |
+
 ## Worked example: two-shot product beat, `omni_reference`
 
 Inputs: `Image 1` is the product hero (imported with `media_import_url`),
